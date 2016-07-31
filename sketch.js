@@ -13,7 +13,10 @@ $(document).ready(function(){
 
 	modeShift("#single_color");
    	$("#single_color").click(function(){	
-   		var color = prompt("Enter color (red, green, blue, yellow, orange, pink, brown, black)");
+   		var color = prompt("Enter color (red, green, blue, yellow, orange, pink, brown, black)").toLowerCase();
+   		while (color != "red" && color != "green" && color != "blue" && color != "yellow" && color != "orange" && color != "pink" && color != "brown" && color != "black"){
+				color = prompt("Enter color (red, green, blue, yellow, orange, pink, brown, black)").toLowerCase();
+			};
 		$(".grid").mouseenter(function(){
 			$(this).css("background-color", color);
  		});
@@ -31,7 +34,10 @@ $(document).ready(function(){
 			
 	modeShift("#gradient");
    	$("#gradient").click(function(){
-   		var color = prompt("Enter color (red, green, blue, yellow, orange, pink, brown, black)");
+   		var color = prompt("Enter color (red, green, blue, yellow, orange, pink, brown, black)").toLowerCase();
+   		while (color != "red" && color != "green" && color != "blue" && color != "yellow" && color != "orange" && color != "pink" && color != "brown" && color != "black"){
+				color = prompt("Enter color (red, green, blue, yellow, orange, pink, brown, black)").toLowerCase();
+			};
    		$(".grid").css("opacity", 0);
 		$(".grid").mouseenter(function(){
  			$(this).css("background-color", color);
@@ -43,7 +49,10 @@ $(document).ready(function(){
 
  	modeShift("#trail");
    	$("#trail").click(function(){	
-   		var color = prompt("Enter color (red, green, blue, yellow, orange, pink, brown, black)");
+   		var color = prompt("Enter color (red, green, blue, yellow, orange, pink, brown, black)").toLowerCase();
+   		while (color != "red" && color != "green" && color != "blue" && color != "yellow" && color != "orange" && color != "pink" && color != "brown" && color != "black"){
+				color = prompt("Enter color (red, green, blue, yellow, orange, pink, brown, black)").toLowerCase();
+			};
 		$(".grid").mouseenter(function(){
 			$(this).css("background-color", color);
  		});
@@ -60,6 +69,9 @@ $(document).ready(function(){
 			
 			$(".grid").css("background-color", "white");
 			var numGrid = prompt("Enter grid size (1-60)");
+			while (numGrid < 1 || numGrid > 60){
+				numGrid = prompt("Enter grid size (1-60)");
+			};
 			$(".grid").remove();
 		
 			for(var i = 0; i < numGrid; i++){
